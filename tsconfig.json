@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@apps/*": ["./apps/*"],
+      "@packages/*": ["./packages/*"],
+      "react-native": ["./node_modules/react-native-web"]
+    },
+    "types": ["react-native-web"],
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    // "emitDeclarationOnly": true,
+    "jsx": "react-jsx",
+
+    "noImplicitAny": false,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Jest */
+    "esModuleInterop": true
+  },
+  "include": ["apps", "packages"],
+  "exclude": ["node_modules"]
+}
