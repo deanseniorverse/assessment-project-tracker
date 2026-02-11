@@ -12,8 +12,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@packages/ui": resolve(__dirname, "./packages/ui/src"),
-      "@packages/core": resolve(__dirname, "./packages/core/src"),
+      "@packages": resolve(__dirname, "./packages"),
       "react-native": "react-native-web",
     },
   },

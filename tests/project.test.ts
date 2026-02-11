@@ -1,6 +1,9 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { CoreStore } from "@packages/core/stores/CoreStore";
-import type { CoreStoreType, ProjectType } from "@packages/core/stores/CoreTypes";
+import { CoreStore } from "@packages/core/src/stores/CoreStore";
+import type {
+  CoreStoreType,
+  ProjectType,
+} from "@packages/core/src/stores/CoreTypes";
 
 /**
  * Module B: Project Model Extension Tests
@@ -233,7 +236,9 @@ describe("ProjectCollectionExtend", () => {
     it("returns only active projects", () => {
       const activeProjects = store.model.project.ext?.activeProjects;
       expect(activeProjects?.length).toBe(2);
-      expect(activeProjects?.every((p) => p.attr.status === "active")).toBe(true);
+      expect(activeProjects?.every((p) => p.attr.status === "active")).toBe(
+        true
+      );
     });
   });
 
