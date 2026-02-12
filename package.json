@@ -10,8 +10,7 @@
   "scripts": {
     "dev": "yarn workspace @assessment/web dev",
     "build": "yarn workspace @assessment/web build",
-    "test": "vitest run",
-    "test:watch": "vitest",
+    "test": "vitest",
     "lint": "eslint . --ext .ts,.tsx"
   },
   "devDependencies": {

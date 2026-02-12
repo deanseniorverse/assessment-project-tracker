@@ -33,6 +33,6 @@
     /* Jest */
     "esModuleInterop": true
   },
-  "include": ["apps", "packages"],
+  "include": ["apps", "packages", "tests"],
   "exclude": ["node_modules"]
 }
