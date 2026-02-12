@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { CoreStore } from "@packages/core/stores/CoreStore";
-import { ProjectFormState } from "@packages/core/forms/ProjectFormState";
-import type { CoreStoreType } from "@packages/core/stores/CoreTypes";
+import { CoreStore } from "@packages/core/src/stores/CoreStore";
+import { ProjectFormState } from "@packages/core/src/forms/ProjectFormState";
+import type { CoreStoreType } from "@packages/core/src/stores/CoreTypes";
 
 /**
  * Module D: ProjectFormState Tests

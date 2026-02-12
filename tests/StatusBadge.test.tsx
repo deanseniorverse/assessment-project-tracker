@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { StatusBadge } from "@packages/core/components/StatusBadge";
+import { StatusBadge } from "@packages/core/src/components/StatusBadge";
 
 /**
  * Module A: StatusBadge Tests
@@ -29,21 +29,27 @@ describe("StatusBadge", () => {
 
   describe("applies correct theme based on status", () => {
     it("applies neutral/gray theme for todo status", () => {
-      const { container } = render(<StatusBadge status="todo" testID="badge" />);
+      const { container } = render(
+        <StatusBadge status="todo" testID="badge" />
+      );
       const badge = container.querySelector('[data-testid="badge"]');
       // Check that gray/neutral colors are applied
       expect(badge?.className).toMatch(/bg-gray|bg-neutral/);
     });
 
     it("applies primary/blue theme for in-progress status", () => {
-      const { container } = render(<StatusBadge status="in-progress" testID="badge" />);
+      const { container } = render(
+        <StatusBadge status="in-progress" testID="badge" />
+      );
       const badge = container.querySelector('[data-testid="badge"]');
       // Check that blue/primary colors are applied
       expect(badge?.className).toMatch(/bg-blue|bg-primary/);
     });
 
     it("applies success/green theme for done status", () => {
-      const { container } = render(<StatusBadge status="done" testID="badge" />);
+      const { container } = render(
+        <StatusBadge status="done" testID="badge" />
+      );
       const badge = container.querySelector('[data-testid="badge"]');
       // Check that green/success colors are applied
       expect(badge?.className).toMatch(/bg-green|bg-success/);
@@ -61,7 +67,9 @@ describe("StatusBadge", () => {
     });
 
     it("applies base size by default", () => {
-      const { container } = render(<StatusBadge status="todo" testID="badge" />);
+      const { container } = render(
+        <StatusBadge status="todo" testID="badge" />
+      );
       const badge = container.querySelector('[data-testid="badge"]');
       // Check for base text/padding classes
       expect(badge?.className).toMatch(/text-sm|px-2|px-3/);
@@ -98,7 +106,9 @@ describe("StatusBadge", () => {
           testID="badge"
         />
       );
-      const text = container.querySelector('[data-testid="badge"]')?.querySelector('div');
+      const text = container
+        .querySelector('[data-testid="badge"]')
+        ?.querySelector("div");
       // This test assumes the text element receives the text style
       expect(text?.className || "").toContain("font-bold");
     });

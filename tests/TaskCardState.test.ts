@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
-import { CoreStore } from "@packages/core/stores/CoreStore";
-import { TaskCardState } from "@packages/core/components/TaskCardState";
-import type { CoreStoreType } from "@packages/core/stores/CoreTypes";
+import { CoreStore } from "@packages/core/src/stores/CoreStore";
+import { TaskCardState } from "@packages/core/src/components/TaskCardState";
+import type { CoreStoreType } from "@packages/core/src/stores/CoreTypes";
 
 /**
  * Module C: TaskCardState Tests
